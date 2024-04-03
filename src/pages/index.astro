@@ -1,12 +1,64 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import DiscordBtn from '../components/DiscordBtn.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <h1>Retro Game Literature Club</h1>
-    <a href="https://discord.gg/jAbVkyGDRR" target="_blank" class="button"
-      >Join our Discord</a
-    >
+    <div class="framed">
+      <h2>A Book Club, but for Retro Games!</h2>
+      <DiscordBtn client:load />
+      <p>
+        We are a group of people who love retro games and want to share our love
+        with others. We meet every 2 weeks to discuss a game we all played and
+        share our thoughts on it.
+      </p>
+      <p>
+        We also have a Discord server where we talk about games, share
+        recommendations, and help each other out with any issues we might have
+        with our games.
+      </p>
+      <p>
+        If you are interested in joining us, click the button above to join our
+        Discord server. We would love to have you!
+      </p>
+      <div class="framed no-hd">
+        <h3>When will you next meet?</h3>
+        <small>In 2 weeks!</small>
+      </div>
+      <div class="framed no-hd">
+        <h3>Can you help me get set up with retro gaming?</h3>
+        <small>Absolutely! We are emulation nerds and love this stuff.</small>
+      </div>
+      <div class="framed no-hd legal">
+        <h3>Do you provide roms?</h3>
+        <small>Absolutely not.</small>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Made by <a href="https://github.com/SaraVieira">SaraVieira</a> & <a
+          href="https://github.com/hola-soy-milk">hola-soy-milk</a
+        >
+      </p>
+    </footer>
   </main>
 </Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+  }
+  h2,
+  h3 {
+    margin-bottom: 2rem;
+  }
+  .legal:hover > small::after {
+    content: '.. Maybe';
+  }
+</style>

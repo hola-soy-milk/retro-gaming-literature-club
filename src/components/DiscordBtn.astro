@@ -1,0 +1,11 @@
+---
+const response = await fetch(
+  'https://discord.com/api/v9/invites/SaWEM9vv?with_counts=true',
+);
+const data = await response.json();
+const memberCount = data.approximate_member_count;
+---
+
+<a href="https://discord.gg/jAbVkyGDRR" target="_blank" class="button"
+  >Join our Discord! ({memberCount} members and counting)</a
+>
