@@ -1,10 +1,12 @@
 ---
-import DiscordBtn from '../components/DiscordBtn.astro';
+import DiscordBtn from '../components/DiscordBtn';
 import Layout from '../layouts/Layout.astro';
+import logo from '../assets/logo.svg';
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
+    <img src={logo.src} alt="Retro Game Literature Club Logo" width="200" />
     <h1>Retro Game Literature Club</h1>
     <div class="framed">
       <h2>A Book Club, but for Retro Games!</h2>
@@ -15,9 +17,8 @@ import Layout from '../layouts/Layout.astro';
         share our thoughts on it.
       </p>
       <p>
-        We also have a Discord server where we talk about games, share
-        recommendations, and help each other out with any issues we might have
-        with our games.
+        We meet on Discord where we talk about games, share recommendations, and
+        help each other out with any issues we might have with our games.
       </p>
       <p>
         If you are interested in joining us, click the button above to join our
@@ -25,7 +26,12 @@ import Layout from '../layouts/Layout.astro';
       </p>
       <div class="framed no-hd">
         <h3>When will you next meet?</h3>
-        <small>In 2 weeks!</small>
+        <small
+          >We'll meet on Wednesday, April 17th at 16:00 UTC to talk about
+          <a href="https://letsplayretro.games/gb/kirby-s-dream-land-2"
+            >Kirby's Dream Land 2 on Gameboy</a
+          >!</small
+        >
       </div>
       <div class="framed no-hd">
         <h3>Can you help me get set up with retro gaming?</h3>
@@ -47,12 +53,13 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 100vh;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    text-align: center;
   }
   h2,
   h3 {
