@@ -5,7 +5,7 @@ export default function DiscordBtn() {
   useEffect(() => {
     const loadDiscordCount = async () => {
       const response = await fetch(
-        'https://discord.com/api/v9/invites/SaWEM9vv?with_counts=true',
+        'https://discord.com/api/v9/invites/dmuXS3X8nB?with_counts=true',
       );
       const data = await response.json();
       setMemberCount(data.approximate_member_count);
